@@ -17,6 +17,9 @@ RUN cp -a /usr/share/easy-rsa /opt/
 # Add some customize command
 ADD ./bin/gen-ta-key /opt/easy-rsa/
 
+# Hack clean-all
+ADD ./bin/clean-all /opt/easy-rsa/
+
 # Create the directory that store keys.
 RUN mkdir -p /opt/easy-rsa/keys
 
