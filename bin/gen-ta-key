@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Generate the keys that TLS-auth need.
+
+openvpn --genkey --secret keys/ta.key

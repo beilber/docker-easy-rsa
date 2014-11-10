@@ -2,8 +2,8 @@ FROM ubuntu:trusty
 
 RUN apt-get update -q
 
-# Simple shell based CA utility
-RUN apt-get install -qqy easy-rsa
+#
+RUN apt-get install -qqy easy-rsa openvpn
 
 # EDITOR (I hate UI)
 RUN apt-get install -qqy mg
@@ -12,7 +12,10 @@ RUN apt-get install -qqy mg
 RUN apt-get clean
 
 # Copy easy-rsa to /opt
-RUN cp -a /usr/share/easy-rsa /opt
+RUN cp -a /usr/share/easy-rsa /opt/
+
+# Add some customize command
+ADD ./bin/gen-ta-key /opt/easy-rsa/
 
 # Create the directory that store keys.
 RUN mkdir -p /opt/easy-rsa/keys
