@@ -13,7 +13,7 @@ Simple shell based CA utility on docker.
     * `build.sh` : a convinient script for building Docker image. 
     * `run.sh` : a convinient script for running Docker container.
 * easy-rsa configuration
-    * `easy-rsa.setting` : this file will mount as /opt/easy-rsa/vars when the container runs.
+    * `easy-rsa.setting` : this file will be mounted as /opt/easy-rsa/vars when the container runs.
 
 # LICENSE
 [Don't Be a Dick Public License](http://dbad-license.org)
